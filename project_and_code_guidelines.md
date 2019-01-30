@@ -602,7 +602,7 @@ This is good:
 
 ```xml
 <TextView
-    android:id="@+id/tv_view_profile"
+    android:id="@+id/tvViewProfile"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 ```
@@ -612,7 +612,7 @@ This is __bad__ :
 ```xml
 <!-- Don\'t do this! -->
 <TextView
-    android:id="@+id/tv_view_profile"
+    android:id="@+id/tvViewProfile"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
 </TextView>
@@ -621,44 +621,44 @@ This is __bad__ :
 
 ### 2.3.2 Resources naming
 
-Resource IDs and names are written in __lowercase_underscore__.
+Resource IDs and names are written in __lowerCamelCase__.
 
 #### 2.3.2.1 ID naming
 
-IDs should be prefixed with a shortening of element type in lowercase underscore. For example:
+IDs should be prefixed with a shortening of element type in lowercase. For example:
 
 
 | Element            | Prefix            |
 | -----------------  | ----------------- |
-| `TextView`         | `tv_`             |
-| `ImageView`        | `iv_`             |
-| `Button`           | `b_`              |
-| `ViewGroup`	     | `w_`
+| `TextView`         | `tv`              |
+| `ImageView`        | `iv`              |
+| `Button`           | `b`               |
+| `ViewGroup`	     | `w`
 
 Image view example:
 
 ```xml
 <ImageView
-    android:id="@+id/iv_profile"
+    android:id="@+id/ivProfile"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 ```
 
-Use `w_` for wrappers, a.k.a. ViewGroups. For example:
+Use `w` for wrappers, a.k.a. ViewGroups. For example:
 
 ```xml
 <LinearLayout
-    android:id="@+id/w_user_data"
+    android:id="@+id/wUserData"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 ```
 
-Menu items id should be prefixed with `menu_`. For example:
+Menu items id should be prefixed with `menu`. For example:
 
 ```xml
 <menu>
 	<item
-        android:id="@+id/menu_done"
+        android:id="@+id/menuDone"
         android:title="Done" />
 </menu>
 ```
@@ -723,7 +723,7 @@ To achieve this use __tools__ namespace:
 
         //Set sample text if text field is empty initially.
         <EditText
-            android:id="@+id/et_username"
+            android:id="@+id/etUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="John Dao"/>
