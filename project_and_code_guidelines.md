@@ -561,7 +561,7 @@ Picasso.with(context)
 
 __Multiple parameters case__
 
-When a method has more than one parametes or its parameter is very long, we should break the line after `(`, before `)`, and after every comma `,`.
+When a method has more than one parameter or its parameter is very long, we should break the line after `(`, before `)`, and after every comma `,`.
 
 ```java
 loadPicture(context, "http://ribot.co.uk/images/sexyjoe.jpg", mImageViewProfilePicture, clickListener, "Title of the picture");
