@@ -376,10 +376,17 @@ Examples:
 
 ```java
 // Context always goes first
-public User loadUser(Context context, int userId);
+public User loadUser(
+	Context context,
+	int userId
+);
 
 // Callbacks always go last
-public void loadUserAsync(Context context, int userId, UserCallback callback);
+public void loadUserAsync(
+	Context context,
+	int userId,
+	UserCallback callback
+);
 ```
 
 ### 2.2.10 String constants, naming, and values
@@ -552,9 +559,9 @@ Picasso.with(context)
         .into(imageView);
 ```
 
-__Long parameters case__
+__Multiple parameters case__
 
-When a method has many parameters or its parameters are very long, we should break the line after `(`, before `)`, and after every comma `,`.
+When a method has more than one parameter or its parameter is very long, we should break the line after `(`, before `)`, and after every comma `,`.
 
 ```java
 loadPicture(context, "http://ribot.co.uk/images/sexyjoe.jpg", mImageViewProfilePicture, clickListener, "Title of the picture");
