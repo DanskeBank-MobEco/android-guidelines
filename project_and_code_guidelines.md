@@ -510,8 +510,23 @@ __Good:__
     private TextView tvName, tvEmail;
 ```
 
+### 2.2.14 ViewModel function-, LiveData- and SingleLiveEvent-naming
 
-### 2.2.14 Line length limit
+Clicks or events from the UI that are passed to the view model must call a function prefixed with "on", e.g. onOkClicked().
+
+Events emitted back to the UI from the view model must be SingleLiveEvent and have the "on" prefix, e.g. onError.
+
+State emitted to the UI should indicate what data it is showing, e.g. "loading" that shows a progress indicator.
+
+```kotlin
+    fun onOkClicked(): Unit
+    val onEventHappened = SingleLiveEvent<Unit>()
+    val onError = SingleLiveEvent<Error>()
+    val loading = NonNullMutableLiveData(false)
+```
+
+
+### 2.2.15 Line length limit
 
 Code lines should not exceed __100 characters__. If the line is longer than this limit there are usually two options to reduce its length:
 
@@ -523,7 +538,7 @@ There are two __exceptions__ where it is possible to have lines longer than 100:
 * Lines that are not possible to split, e.g. long URLs in comments.
 * `package` and `import` statements.
 
-#### 2.2.14.1 Line-wrapping strategies
+#### 2.2.15.1 Line-wrapping strategies
 
 There isn't an exact formula that explains how to line-wrap and quite often different solutions are valid. However there are a few rules that can be applied to common cases.
 
@@ -577,7 +592,7 @@ loadPicture(
 );
 ```
 
-### 2.2.15 RxJava chains styling
+### 2.2.16 RxJava chains styling
 
 Rx chains of operators require line-wrapping. Every operator must go in a new line and the line should be broken before the `.`
 
