@@ -759,15 +759,15 @@ All components align to an 8dp square baseline grid. Iconography in toolbars ali
 
 #### 2.3.5.1 Use common dimension resources
 
-Use common dimension resources for view paddings and margins to make layouts consistent and better adapt to different screen configurations.
+Use common dimension resources spacing for view paddings and margins to make layouts consistent and better adapt to different screen configurations.
 
-| Margins | Paddings |
-| --- | --- |
-| `margin_xs` | `padding_xs` |
-| `margin_s` | `padding_s` |
-| `margin_m` | `padding_m` |
-| `margin_l` | `padding_l` |
-| `margin_xl` | `padding_xl` |
+| Margins/paddings |
+| --- |
+| `spacing_xs` |
+| `spacing_s` |
+| `spacing_m` |
+| `spacing_l` |
+| `spacing_xl` |
 
 #### 2.3.5.2 Use screen margin dimension resources
 
