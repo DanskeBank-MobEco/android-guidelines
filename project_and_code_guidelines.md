@@ -510,11 +510,11 @@ __Good:__
     private TextView tvName, tvEmail;
 ```
 
-### 2.2.14 ViewModel function-, LiveData- and SingleLiveEvent-naming
+### 2.2.14 ViewModel function-, Flow-, LiveData- and SingleLiveEvent-naming
 
 Clicks or events from the UI that are passed to the view model must call a function prefixed with "on", e.g. onOkClicked().
 
-Events emitted back to the UI from the view model must be SingleLiveEvent and have the "on" prefix, e.g. onError.
+Events emitted back to the UI from the view model must be Flow (with Channel) or SingleLiveEvent and have the "on" prefix, e.g. onError.
 
 State emitted to the UI should indicate what data it is showing, e.g. "loading" that shows a progress indicator.
 
@@ -523,6 +523,8 @@ State emitted to the UI should indicate what data it is showing, e.g. "loading" 
     val onEventHappened = SingleLiveEvent<Unit>()
     val onError = SingleLiveEvent<Error>()
     val loading = NonNullMutableLiveData(false)
+    private val onErrorChannel = Channel<String>(Channel.BUFFERED)
+    val onError = onErrorChannel.receiveAsFlow()
 ```
 
 
